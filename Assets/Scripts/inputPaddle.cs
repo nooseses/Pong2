@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class inputPaddle : MonoBehaviour
 {
+    //variables
     public float xPos;
     public float yPos;
     public float xSpeed;
@@ -21,6 +22,7 @@ public class inputPaddle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //left paddle controls W and S for up and down, also limits the movement
         if (leftOrRight == "left")
 
             if (Input.GetKey(KeyCode.W)&& transform.position.y <= 3.6f)
@@ -34,6 +36,7 @@ public class inputPaddle : MonoBehaviour
                 transform.Translate(Vector3.down * speed * Time.deltaTime);
             }
         {
+            //right paddle controls, up and down arrow
             if (leftOrRight == "right")
 
                 if (Input.GetKey(KeyCode.UpArrow) && transform.position.y <= 3.6f)
